@@ -14,7 +14,9 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return view('products.index');
+        return view('products.index', [
+            'products' => Products::orderBy('id', 'desc')->get()
+        ]);
     }
 
     /**
@@ -22,9 +24,9 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Products $product)
     {
-        //
+        return view('products.create', ['product' => $product]);
     }
 
     /**
@@ -35,7 +37,40 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'price' => 'required|numeric',
+            'stock_alejo' => 'required|numeric',
+            'stock_andy' => 'required|numeric',
+            'stock_rodolfo' => 'required|numeric',
+            'stock_kevin' => 'required|numeric',
+            'stock_hector' => 'required|numeric',
+            'stock_jenny' => 'required|numeric',
+        ], [
+            'name.required' => 'Este campo es obligatiorio.',
+            'price.required' => 'Este campo es obligatiorio.',
+            'stock_alejo.required' => 'Este campo es obligatiorio.',
+            'stock_andy.required' => 'Este campo es obligatiorio.',
+            'stock_rodolfo.required' => 'Este campo es obligatiorio.',
+            'stock_kevin.required' => 'Este campo es obligatiorio.',
+            'stock_hector.required' => 'Este campo es obligatiorio.',
+            'stock_jenny.required' => 'Este campo es obligatiorio.',
+        ]);
+
+        $product = Products::create([
+            'name' => $request->name,
+            'price' => $request->price,
+            'stock_alejo' => $request->stock_alejo,
+            'stock_andy' => $request->stock_andy,
+            'stock_rodolfo' => $request->stock_rodolfo,
+            'stock_kevin' => $request->stock_kevin,
+            'stock_hector' => $request->stock_hector,
+            'stock_jenny' => $request->stock_jenny,
+        ]);
+
+        $product->save();
+
+        return redirect()->route('products.index');
     }
 
     /**
@@ -55,9 +90,9 @@ class ProductsController extends Controller
      * @param  \App\Models\Products  $products
      * @return \Illuminate\Http\Response
      */
-    public function edit(Products $products)
+    public function edit(Products $product)
     {
-        //
+        return view('products.edit', ['product' => $product]);
     }
 
     /**
@@ -67,9 +102,40 @@ class ProductsController extends Controller
      * @param  \App\Models\Products  $products
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Products $products)
+    public function update(Request $request, Products $product)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'price' => 'required|numeric',
+            'stock_alejo' => 'required|numeric',
+            'stock_andy' => 'required|numeric',
+            'stock_rodolfo' => 'required|numeric',
+            'stock_kevin' => 'required|numeric',
+            'stock_hector' => 'required|numeric',
+            'stock_jenny' => 'required|numeric',
+        ], [
+            'name.required' => 'Este campo es obligatiorio.',
+            'price.required' => 'Este campo es obligatiorio.',
+            'stock_alejo.required' => 'Este campo es obligatiorio.',
+            'stock_andy.required' => 'Este campo es obligatiorio.',
+            'stock_rodolfo.required' => 'Este campo es obligatiorio.',
+            'stock_kevin.required' => 'Este campo es obligatiorio.',
+            'stock_hector.required' => 'Este campo es obligatiorio.',
+            'stock_jenny.required' => 'Este campo es obligatiorio.',
+        ]);
+
+        $product->update([
+            'name' => $request->name,
+            'price' => $request->price,
+            'stock_alejo' => $request->stock_alejo,
+            'stock_andy' => $request->stock_andy,
+            'stock_rodolfo' => $request->stock_rodolfo,
+            'stock_kevin' => $request->stock_kevin,
+            'stock_hector' => $request->stock_hector,
+            'stock_jenny' => $request->stock_jenny,
+        ]);
+
+        return redirect()->route('products.index');
     }
 
     /**
@@ -78,8 +144,10 @@ class ProductsController extends Controller
      * @param  \App\Models\Products  $products
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Products $products)
+    public function destroy(Products $product)
     {
-        //
+        $product->delete();
+
+        return back();
     }
 }

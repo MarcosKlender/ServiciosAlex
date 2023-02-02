@@ -16,6 +16,14 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('name');
+            $table->decimal('price', 6, 2);
+            $table->integer('stock_alejo');
+            $table->integer('stock_andy');
+            $table->integer('stock_rodolfo');
+            $table->integer('stock_kevin');
+            $table->integer('stock_hector');
+            $table->integer('stock_jenny');
         });
     }
 
