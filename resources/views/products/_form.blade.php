@@ -6,31 +6,31 @@
 
 <label class="text-gray-700">Precio</label>
 <span class="ml-3 text-red-700">@error('price') *{{ $message }} @enderror</span>
-<input type="number" name="price" class="rounded border-gray-200 w-full mb-4" value="{{ old('price', $product->price) }}">
+<input type="number" step="0.01" name="price" class="rounded border-gray-200 w-full mb-4" value="{{ old('price', $product->price) }}">
 
 <label class="text-gray-700">Stock Alejo</label>
-<span class="ml-3 text-red-700">@error('stock_alejo') *{{ $message }} @enderror</span>
-<input type="number" name="stock_alejo" class="rounded border-gray-200 w-full mb-4" value="{{ old('stock_alejo', $product->stock_alejo) }}">
+<span class="ml-3 text-red-700">@error('stock1') *{{ $message }} @enderror</span>
+<input type="number" name="stock1" class="rounded border-gray-200 w-full mb-4" value="{{ old('stock1', $product->stock1) }}">
 
 <label class="text-gray-700">Stock Andy</label>
-<span class="ml-3 text-red-700">@error('stock_andy') *{{ $message }} @enderror</span>
-<input type="number" name="stock_andy" class="rounded border-gray-200 w-full mb-4" value="{{ old('stock_andy', $product->stock_andy) }}">
+<span class="ml-3 text-red-700">@error('stock2') *{{ $message }} @enderror</span>
+<input type="number" name="stock2" class="rounded border-gray-200 w-full mb-4" value="{{ old('stock2', $product->stock2) }}">
 
 <label class="text-gray-700">Stock Rodolfo</label>
-<span class="ml-3 text-red-700">@error('stock_rodolfo') *{{ $message }} @enderror</span>
-<input type="number" name="stock_rodolfo" class="rounded border-gray-200 w-full mb-4" value="{{ old('stock_rodolfo', $product->stock_rodolfo) }}">
+<span class="ml-3 text-red-700">@error('stock3') *{{ $message }} @enderror</span>
+<input type="number" name="stock3" class="rounded border-gray-200 w-full mb-4" value="{{ old('stock3', $product->stock3) }}">
 
 <label class="text-gray-700">Stock Kevin</label>
-<span class="ml-3 text-red-700">@error('stock_kevin') *{{ $message }} @enderror</span>
-<input type="number" name="stock_kevin" class="rounded border-gray-200 w-full mb-4" value="{{ old('stock_kevin', $product->stock_kevin) }}">
+<span class="ml-3 text-red-700">@error('stock4') *{{ $message }} @enderror</span>
+<input type="number" name="stock4" class="rounded border-gray-200 w-full mb-4" value="{{ old('stock4', $product->stock4) }}">
 
 <label class="text-gray-700">Stock Hector</label>
-<span class="ml-3 text-red-700">@error('stock_hector') *{{ $message }} @enderror</span>
-<input type="number" name="stock_hector" class="rounded border-gray-200 w-full mb-4" value="{{ old('stock_hector', $product->stock_hector) }}">
+<span class="ml-3 text-red-700">@error('stock5') *{{ $message }} @enderror</span>
+<input type="number" name="stock5" class="rounded border-gray-200 w-full mb-4" value="{{ old('stock5', $product->stock5) }}">
 
 <label class="text-gray-700">Stock Jenny</label>
-<span class="ml-3 text-red-700">@error('stock_jenny') *{{ $message }} @enderror</span>
-<input type="number" name="stock_jenny" class="rounded border-gray-200 w-full mb-4" value="{{ old('stock_jenny', $product->stock_jenny) }}">
+<span class="ml-3 text-red-700">@error('stock6') *{{ $message }} @enderror</span>
+<input type="number" name="stock6" class="rounded border-gray-200 w-full mb-4" value="{{ old('stock6', $product->stock6) }}">
 
 <div class="flex items-center justify-between">
     <a href="{{ route('products.index') }}" class="text-red-600">Volver</a>

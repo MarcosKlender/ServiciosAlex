@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Products;
+use App\Models\Stocks;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -15,7 +16,8 @@ class ProductsController extends Controller
     public function index()
     {
         return view('products.index', [
-            'products' => Products::orderBy('id', 'desc')->get()
+            'products' => Products::orderBy('id', 'desc')->get(),
+            'stocks' => Stocks::first()
         ]);
     }
 
@@ -40,32 +42,32 @@ class ProductsController extends Controller
         $request->validate([
             'name' => 'required',
             'price' => 'required|numeric',
-            'stock_alejo' => 'required|numeric',
-            'stock_andy' => 'required|numeric',
-            'stock_rodolfo' => 'required|numeric',
-            'stock_kevin' => 'required|numeric',
-            'stock_hector' => 'required|numeric',
-            'stock_jenny' => 'required|numeric',
+            'stock1' => 'required|numeric',
+            'stock2' => 'required|numeric',
+            'stock3' => 'required|numeric',
+            'stock4' => 'required|numeric',
+            'stock5' => 'required|numeric',
+            'stock6' => 'required|numeric',
         ], [
             'name.required' => 'Este campo es obligatiorio.',
             'price.required' => 'Este campo es obligatiorio.',
-            'stock_alejo.required' => 'Este campo es obligatiorio.',
-            'stock_andy.required' => 'Este campo es obligatiorio.',
-            'stock_rodolfo.required' => 'Este campo es obligatiorio.',
-            'stock_kevin.required' => 'Este campo es obligatiorio.',
-            'stock_hector.required' => 'Este campo es obligatiorio.',
-            'stock_jenny.required' => 'Este campo es obligatiorio.',
+            'stock1.required' => 'Este campo es obligatiorio.',
+            'stock2.required' => 'Este campo es obligatiorio.',
+            'stock3.required' => 'Este campo es obligatiorio.',
+            'stock4.required' => 'Este campo es obligatiorio.',
+            'stock5.required' => 'Este campo es obligatiorio.',
+            'stock6.required' => 'Este campo es obligatiorio.',
         ]);
 
         $product = Products::create([
             'name' => $request->name,
             'price' => $request->price,
-            'stock_alejo' => $request->stock_alejo,
-            'stock_andy' => $request->stock_andy,
-            'stock_rodolfo' => $request->stock_rodolfo,
-            'stock_kevin' => $request->stock_kevin,
-            'stock_hector' => $request->stock_hector,
-            'stock_jenny' => $request->stock_jenny,
+            'stock1' => $request->stock1,
+            'stock2' => $request->stock2,
+            'stock3' => $request->stock3,
+            'stock4' => $request->stock4,
+            'stock5' => $request->stock5,
+            'stock6' => $request->stock6,
         ]);
 
         $product->save();
@@ -107,32 +109,32 @@ class ProductsController extends Controller
         $request->validate([
             'name' => 'required',
             'price' => 'required|numeric',
-            'stock_alejo' => 'required|numeric',
-            'stock_andy' => 'required|numeric',
-            'stock_rodolfo' => 'required|numeric',
-            'stock_kevin' => 'required|numeric',
-            'stock_hector' => 'required|numeric',
-            'stock_jenny' => 'required|numeric',
+            'stock1' => 'required|numeric',
+            'stock2' => 'required|numeric',
+            'stock3' => 'required|numeric',
+            'stock4' => 'required|numeric',
+            'stock5' => 'required|numeric',
+            'stock6' => 'required|numeric',
         ], [
             'name.required' => 'Este campo es obligatiorio.',
             'price.required' => 'Este campo es obligatiorio.',
-            'stock_alejo.required' => 'Este campo es obligatiorio.',
-            'stock_andy.required' => 'Este campo es obligatiorio.',
-            'stock_rodolfo.required' => 'Este campo es obligatiorio.',
-            'stock_kevin.required' => 'Este campo es obligatiorio.',
-            'stock_hector.required' => 'Este campo es obligatiorio.',
-            'stock_jenny.required' => 'Este campo es obligatiorio.',
+            'stock1.required' => 'Este campo es obligatiorio.',
+            'stock2.required' => 'Este campo es obligatiorio.',
+            'stock3.required' => 'Este campo es obligatiorio.',
+            'stock4.required' => 'Este campo es obligatiorio.',
+            'stock5.required' => 'Este campo es obligatiorio.',
+            'stock6.required' => 'Este campo es obligatiorio.',
         ]);
 
         $product->update([
             'name' => $request->name,
             'price' => $request->price,
-            'stock_alejo' => $request->stock_alejo,
-            'stock_andy' => $request->stock_andy,
-            'stock_rodolfo' => $request->stock_rodolfo,
-            'stock_kevin' => $request->stock_kevin,
-            'stock_hector' => $request->stock_hector,
-            'stock_jenny' => $request->stock_jenny,
+            'stock1' => $request->stock1,
+            'stock2' => $request->stock2,
+            'stock3' => $request->stock3,
+            'stock4' => $request->stock4,
+            'stock5' => $request->stock5,
+            'stock6' => $request->stock6,
         ]);
 
         return redirect()->route('products.index');

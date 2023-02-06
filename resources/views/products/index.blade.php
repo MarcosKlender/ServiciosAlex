@@ -16,12 +16,13 @@
                             <tr class="bg-gray-700">
                                 <th class="p-3 tracking-wide">Nombre</th>
                                 <th class="p-3 tracking-wide">Precio</th>
-                                <th class="p-3 tracking-wide">Alejo</th>
-                                <th class="p-3 tracking-wide">Andy</th>
-                                <th class="p-3 tracking-wide">Rodolfo</th>
-                                <th class="p-3 tracking-wide">Kevin</th>
-                                <th class="p-3 tracking-wide">Hector</th>
-                                <th class="p-3 tracking-wide">Jenny</th>
+                                <th class="p-3 tracking-wide">{{ $stocks->stock1_name }}</th>
+                                <th class="p-3 tracking-wide">{{ $stocks->stock2_name }}</th>
+                                <th class="p-3 tracking-wide">{{ $stocks->stock3_name }}</th>
+                                <th class="p-3 tracking-wide">{{ $stocks->stock4_name }}</th>
+                                <th class="p-3 tracking-wide">{{ $stocks->stock5_name }}</th>
+                                <th class="p-3 tracking-wide">{{ $stocks->stock6_name }}</th>
+                                <th class="p-3 tracking-wide">TOTAL</th>
                                 <th class="p-3 tracking-wide">Acciones</th>
                             </tr>
                         </thead>
@@ -30,22 +31,40 @@
                                 <tr class="odd:bg-white even:bg-gray-200">
                                     <td class="p-3 whitespace-nowrap">{{ $product->name }}</td>
                                     <td class="p-3 whitespace-nowrap">{{ $product->price }}</td>
-                                    <td class="p-3 whitespace-nowrap">{{ $product->stock_alejo }}</td>
-                                    <td class="p-3 whitespace-nowrap">{{ $product->stock_andy }}</td>
-                                    <td class="p-3 whitespace-nowrap">{{ $product->stock_rodolfo }}</td>
-                                    <td class="p-3 whitespace-nowrap">{{ $product->stock_kevin }}</td>
-                                    <td class="p-3 whitespace-nowrap">{{ $product->stock_hector }}</td>
-                                    <td class="p-3 whitespace-nowrap">{{ $product->stock_jenny }}</td>
+                                    <td class="p-3 whitespace-nowrap">{{ $product->stock1 }}</td>
+                                    <td class="p-3 whitespace-nowrap">{{ $product->stock2 }}</td>
+                                    <td class="p-3 whitespace-nowrap">{{ $product->stock3 }}</td>
+                                    <td class="p-3 whitespace-nowrap">{{ $product->stock4 }}</td>
+                                    <td class="p-3 whitespace-nowrap">{{ $product->stock5 }}</td>
+                                    <td class="p-3 whitespace-nowrap">{{ $product->stock6 }}</td>
+                                    <td class="p-3 whitespace-nowrap font-black">
+                                        {{ $product->stock1 + $product->stock2 + $product->stock3 + $product->stock4 + $product->stock5 + $product->stock6 }}
+                                    </td>
                                     <td class="p-3 whitespace-nowrap">
-                                        <a href="{{ route('products.edit', $product) }}" class="text-sky-700">Editar</a>
-                                        <form action="{{ route('products.destroy', $product) }}" method="POST" class="text-red-700">
+                                        <a href="{{ route('products.edit', $product) }}"
+                                            class="text-sky-700">Editar</a>
+                                        <form action="{{ route('products.destroy', $product) }}" method="POST"
+                                            class="text-red-700">
                                             @csrf
                                             @method('DELETE')
-                                            <input type="submit" value="Eliminar" class="text-red-700" onclick="return confirm('¿Está seguro de eliminar este producto?')">
+                                            <input type="submit" value="Eliminar" class="text-red-700"
+                                                onclick="return confirm('¿Está seguro de eliminar este producto?')">
                                         </form>
                                     </td>
                                 </tr>
                             @endforeach
+                            <tr class="odd:bg-white even:bg-gray-200">
+                                <td class="p-3 whitespace-nowrap font-black">TOTAL EN STOCK</td>
+                                <td class="p-3 whitespace-nowrap"></td>
+                                <td class="p-3 whitespace-nowrap font-black">{{ $product->sum('stock1') }}</td>
+                                <td class="p-3 whitespace-nowrap font-black">{{ $product->sum('stock2') }}</td>
+                                <td class="p-3 whitespace-nowrap font-black">{{ $product->sum('stock3') }}</td>
+                                <td class="p-3 whitespace-nowrap font-black">{{ $product->sum('stock4') }}</td>
+                                <td class="p-3 whitespace-nowrap font-black">{{ $product->sum('stock5') }}</td>
+                                <td class="p-3 whitespace-nowrap font-black">{{ $product->sum('stock6') }}</td>
+                                <td class="p-3 whitespace-nowrap font-black"></td>
+                                <td class="p-3 whitespace-nowrap font-black"></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
