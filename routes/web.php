@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\StocksController;
 
 Route::get('/', function () {
     return view('auth.login');
@@ -25,5 +26,7 @@ Route::resource('products', ProductsController::class);
 Route::resource('orders', OrdersController::class);
 
 Route::resource('search', SearchController::class);
+
+Route::resource('stocks', StocksController::class);
 
 require __DIR__.'/auth.php';

@@ -14,7 +14,9 @@ class OrdersController extends Controller
      */
     public function index()
     {
-        return view('orders.index');
+        return view('orders.index', [
+            'orders' => Orders::orderBy('id', 'asc')->get()
+        ]);
     }
 
     /**
@@ -44,9 +46,9 @@ class OrdersController extends Controller
      * @param  \App\Models\Orders  $orders
      * @return \Illuminate\Http\Response
      */
-    public function show(Orders $orders)
+    public function show(Orders $order)
     {
-        //
+        return view('orders.show', ['order' => $order]);
     }
 
     /**
@@ -55,9 +57,9 @@ class OrdersController extends Controller
      * @param  \App\Models\Orders  $orders
      * @return \Illuminate\Http\Response
      */
-    public function edit(Orders $orders)
+    public function edit(Orders $order)
     {
-        //
+        return view('orders.edit', ['order' => $order]);
     }
 
     /**

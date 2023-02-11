@@ -55,9 +55,9 @@ class StocksController extends Controller
      * @param  \App\Models\Stocks  $stocks
      * @return \Illuminate\Http\Response
      */
-    public function edit(Stocks $stocks)
+    public function edit(Stocks $stock)
     {
-        //
+        return view('stocks.edit', ['stock' => $stock]);
     }
 
     /**
@@ -67,9 +67,34 @@ class StocksController extends Controller
      * @param  \App\Models\Stocks  $stocks
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Stocks $stocks)
+    public function update(Request $request, Stocks $stock)
     {
-        //
+        $request->validate([
+            'stock1_name' => 'required',
+            'stock2_name' => 'required',
+            'stock3_name' => 'required',
+            'stock4_name' => 'required',
+            'stock5_name' => 'required',
+            'stock6_name' => 'required',
+        ], [
+            'stock1_name.required' => 'Este campo es obligatiorio.',
+            'stock2_name.required' => 'Este campo es obligatiorio.',
+            'stock3_name.required' => 'Este campo es obligatiorio.',
+            'stock4_name.required' => 'Este campo es obligatiorio.',
+            'stock5_name.required' => 'Este campo es obligatiorio.',
+            'stock6_name.required' => 'Este campo es obligatiorio.',
+        ]);
+
+        $stock->update([
+            'stock1_name' => $request->stock1_name,
+            'stock2_name' => $request->stock2_name,
+            'stock3_name' => $request->stock3_name,
+            'stock4_name' => $request->stock4_name,
+            'stock5_name' => $request->stock5_name,
+            'stock6_name' => $request->stock6_name,
+        ]);
+
+        return redirect()->route('products.index');
     }
 
     /**

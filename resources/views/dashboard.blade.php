@@ -20,7 +20,7 @@
 
                 <!-- Módulo Órdenes -->
                 <a href="{{ route('orders.index') }}" class='basis-4/12 flex items-center justify-center py-3'>
-                    <div class="rounded-xl border p-5 shadow-md w-11/12 bg-teal-100">
+                    <div class="rounded-xl border p-5 shadow-md w-11/12 bg-purple-100">
                         <div class="my-6">
                             <div class="text-center text-xl font-bold">Órdenes</div>
                         </div>
@@ -29,7 +29,7 @@
 
                 <!-- Módulo Búsqueda -->
                 <a href="{{ route('search.index') }}" class='basis-4/12 flex items-center justify-center py-3'>
-                    <div class="rounded-xl border p-5 shadow-md w-11/12 bg-purple-100">
+                    <div class="rounded-xl border p-5 shadow-md w-11/12 bg-teal-100">
                         <div class="my-6">
                             <div class="text-center text-xl font-bold">Búsqueda</div>
                         </div>

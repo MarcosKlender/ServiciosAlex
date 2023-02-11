@@ -63,7 +63,10 @@
                                 <td class="p-3 whitespace-nowrap font-black">{{ $product->sum('stock5') }}</td>
                                 <td class="p-3 whitespace-nowrap font-black">{{ $product->sum('stock6') }}</td>
                                 <td class="p-3 whitespace-nowrap font-black"></td>
-                                <td class="p-3 whitespace-nowrap font-black"></td>
+                                <td class="p-3 whitespace-nowrap">
+                                    <a href="{{ route('stocks.edit', $stocks) }}"
+                                        class="text-sky-700 font-black">Stocks</a>
+                                </td>
                             </tr>
                         </tbody>
                     </table>

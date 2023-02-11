@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('stocks')->insert([
             'stock1_name' => 'Jenny',
-            'stock2_name' => 'Alejo',
+            'stock2_name' => 'Alejandro',
             'stock3_name' => 'Cristhian',
             'stock4_name' => 'Kevin',
             'stock5_name' => 'Lenin',
@@ -25,18 +25,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('products')->insert([
-            'name' => 'Potenciador XOXO',
-            'price' => 20,
-            'stock1' => 0,
-            'stock2' => 0,
-            'stock3' => 0,
-            'stock4' => 0,
-            'stock5' => 0,
-            'stock6' => 0,
-        ]);
-
-        DB::table('products')->insert([
-            'name' => 'Lovin Fem',
+            'name' => 'Macho Alfa',
             'price' => 25,
             'stock1' => 0,
             'stock2' => 0,
@@ -47,8 +36,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('products')->insert([
-            'name' => 'Potenciador Macho Alfa',
-            'price' => 24.99,
+            'name' => 'Potentisimo',
+            'price' => 20,
             'stock1' => 0,
             'stock2' => 0,
             'stock3' => 0,
@@ -58,8 +47,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('products')->insert([
-            'name' => 'Spray Macho Alfa',
-            'price' => 19.99,
+            'name' => 'Spray Retardante',
+            'price' => 20,
             'stock1' => 0,
             'stock2' => 0,
             'stock3' => 0,
@@ -69,8 +58,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('products')->insert([
-            'name' => 'Cápsulas Macho Alfa + Anillo',
-            'price' => 29.99,
+            'name' => 'XOXO',
+            'price' => 20,
             'stock1' => 0,
             'stock2' => 0,
             'stock3' => 0,
@@ -80,8 +69,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('products')->insert([
-            'name' => 'Pulsera Biomagnética',
-            'price' => 19.99,
+            'name' => 'LovinFem',
+            'price' => 25,
             'stock1' => 0,
             'stock2' => 0,
             'stock3' => 0,
@@ -91,8 +80,74 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('products')->insert([
-            'name' => 'Promo American Fit 2x1',
-            'price' => 49.99,
+            'name' => 'Anillos',
+            'price' => 15,
+            'stock1' => 0,
+            'stock2' => 0,
+            'stock3' => 0,
+            'stock4' => 0,
+            'stock5' => 0,
+            'stock6' => 0,
+        ]);
+
+        DB::table('products')->insert([
+            'name' => 'Pulseras',
+            'price' => 20,
+            'stock1' => 0,
+            'stock2' => 0,
+            'stock3' => 0,
+            'stock4' => 0,
+            'stock5' => 0,
+            'stock6' => 0,
+        ]);
+
+        DB::table('products')->insert([
+            'name' => 'Macho Alfa 50',
+            'price' => 30,
+            'stock1' => 0,
+            'stock2' => 0,
+            'stock3' => 0,
+            'stock4' => 0,
+            'stock5' => 0,
+            'stock6' => 0,
+        ]);
+
+        DB::table('products')->insert([
+            'name' => 'Baraja Roja',
+            'price' => 20,
+            'stock1' => 0,
+            'stock2' => 0,
+            'stock3' => 0,
+            'stock4' => 0,
+            'stock5' => 0,
+            'stock6' => 0,
+        ]);
+
+        DB::table('products')->insert([
+            'name' => 'Baraja Azul',
+            'price' => 20,
+            'stock1' => 0,
+            'stock2' => 0,
+            'stock3' => 0,
+            'stock4' => 0,
+            'stock5' => 0,
+            'stock6' => 0,
+        ]);
+
+        DB::table('products')->insert([
+            'name' => 'Baraja Negra',
+            'price' => 20,
+            'stock1' => 0,
+            'stock2' => 0,
+            'stock3' => 0,
+            'stock4' => 0,
+            'stock5' => 0,
+            'stock6' => 0,
+        ]);
+
+        DB::table('products')->insert([
+            'name' => 'Quitavicio',
+            'price' => 30,
             'stock1' => 0,
             'stock2' => 0,
             'stock3' => 0,
@@ -103,18 +158,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('products')->insert([
             'name' => 'Litoku',
-            'price' => 14.99,
-            'stock1' => 0,
-            'stock2' => 0,
-            'stock3' => 0,
-            'stock4' => 0,
-            'stock5' => 0,
-            'stock6' => 0,
-        ]);
-
-        DB::table('products')->insert([
-            'name' => 'Biotin Collagen',
-            'price' => 19.99,
+            'price' => 15,
             'stock1' => 0,
             'stock2' => 0,
             'stock3' => 0,
@@ -125,7 +169,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('products')->insert([
             'name' => 'Hepadol',
-            'price' => 19.99,
+            'price' => 20,
             'stock1' => 0,
             'stock2' => 0,
             'stock3' => 0,
@@ -135,8 +179,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('products')->insert([
-            'name' => 'Levanthor',
-            'price' => 19.99,
+            'name' => 'XOXO Retardante',
+            'price' => 20,
             'stock1' => 0,
             'stock2' => 0,
             'stock3' => 0,
@@ -145,37 +189,32 @@ class DatabaseSeeder extends Seeder
             'stock6' => 0,
         ]);
 
-        DB::table('products')->insert([
-            'name' => 'Luna Sleep',
-            'price' => 19.99,
-            'stock1' => 0,
-            'stock2' => 0,
-            'stock3' => 0,
-            'stock4' => 0,
-            'stock5' => 0,
-            'stock6' => 0,
-        ]);
-
-        DB::table('products')->insert([
-            'name' => 'Up Estimulador',
-            'price' => 39.99,
-            'stock1' => 0,
-            'stock2' => 0,
-            'stock3' => 0,
-            'stock4' => 0,
-            'stock5' => 0,
-            'stock6' => 0,
-        ]);
-
-        DB::table('products')->insert([
-            'name' => 'Serpidex',
-            'price' => 19.99,
-            'stock1' => 0,
-            'stock2' => 0,
-            'stock3' => 0,
-            'stock4' => 0,
-            'stock5' => 0,
-            'stock6' => 0,
+        DB::table('orders')->insert([
+            'estado' => 'PENDIENTE',
+            'cliente' => 1,
+            'celular' => '+593 123 456 7890',
+            'fecha_entrega' => '2021-08-11',
+            'vendedor' => 'MARCOS',
+            'macho' => 1,
+            'potentisimo' => 2,
+            'spray' => 3,
+            'xoxo' => 4,
+            'lovin' => 5,
+            'anillos' => 6,
+            'pulseras' => 7,
+            'macho50' => 8,
+            'broja' => 9,
+            'bazul' => 10,
+            'bnegra' => 11,
+            'quitavicio' => 12,
+            'litoku' => 13,
+            'hepadol' => 14,
+            'xoxoretardante' => 15,
+            'comprobante' => 1234567890,
+            'carrera' => 2.50,
+            'total' => 252.50,
+            'stock' => 'ALEJANDRO',
+            'novedades' => 'NINGUNA BB',
         ]);
     }
 }
