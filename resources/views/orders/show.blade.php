@@ -31,6 +31,24 @@
                     </div>
 
                     <div>
+                        <label class="text-gray-700">Fecha Entrega</label>
+                        <input type="text" name="fecha_entrega" class="rounded border-gray-200 w-full mb-4"
+                            value="{{ $order->fecha_entrega }}" readonly>
+                    </div>
+
+                    <div>
+                        <label class="text-gray-700">Vendedor</label>
+                        <input type="text" name="vendedor" class="rounded border-gray-200 w-full mb-4"
+                            value="{{ $order->vendedor }}" readonly>
+                    </div>
+
+                    <div>
+                        <label class="text-gray-700">Comprobante</label>
+                        <input type="text" name="comprobante" class="rounded border-gray-200 w-full mb-4"
+                            value="{{ $order->comprobante }}" readonly>
+                    </div>
+
+                    <div>
                         <label class="text-gray-700">Macho Alfa</label>
                         <input type="text" name="macho" class="rounded border-gray-200 w-full mb-4"
                             value="{{ $order->macho }}" readonly>
@@ -121,18 +139,6 @@
                     </div>
 
                     <div>
-                        <label class="text-gray-700">Vendedor</label>
-                        <input type="text" name="vendedor" class="rounded border-gray-200 w-full mb-4"
-                            value="{{ $order->vendedor }}" readonly>
-                    </div>
-
-                    <div>
-                        <label class="text-gray-700">Comprobante</label>
-                        <input type="text" name="comprobante" class="rounded border-gray-200 w-full mb-4"
-                            value="{{ $order->comprobante }}" readonly>
-                    </div>
-
-                    <div>
                         <label class="text-gray-700">Carrera</label>
                         <input type="text" name="carrera" class="rounded border-gray-200 w-full mb-4"
                             value="{{ $order->carrera }}" readonly>
@@ -155,7 +161,6 @@
                         <input type="text" name="novedades" class="rounded border-gray-200 w-full mb-4"
                             value="{{ $order->novedades }}" readonly>
                     </div>
-
                 </div>
 
                 <div class="text-center mb-8">

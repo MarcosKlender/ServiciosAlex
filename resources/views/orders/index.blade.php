@@ -1,7 +1,9 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight flex items-center justify-between">
             {{ __('Órdenes') }}
+
+            <a href="{{ route('orders.create') }}" class="text-green-700">Crear</a>
         </h2>
     </x-slot>
 
