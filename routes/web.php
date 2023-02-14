@@ -29,4 +29,6 @@ Route::resource('search', SearchController::class);
 
 Route::resource('stocks', StocksController::class);
 
+Route::get('/export' , [OrdersController::class, 'exportOrders'])->name('orders.export');
+
 require __DIR__.'/auth.php';

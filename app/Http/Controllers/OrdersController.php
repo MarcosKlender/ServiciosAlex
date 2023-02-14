@@ -2,17 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\OrdersExport;
 use Illuminate\Support\Str;
 use App\Models\Orders;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class OrdersController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return view('orders.index', [
@@ -20,22 +17,11 @@ class OrdersController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create(Orders $order)
     {
         return view('orders.create', ['order' => $order]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -82,35 +68,16 @@ class OrdersController extends Controller
         return redirect()->route('orders.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Orders  $orders
-     * @return \Illuminate\Http\Response
-     */
     public function show(Orders $order)
     {
         return view('orders.show', ['order' => $order]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Orders  $orders
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Orders $order)
     {
         return view('orders.edit', ['order' => $order]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Orders  $orders
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, Orders $order)
     {
         $request->validate([
@@ -155,14 +122,13 @@ class OrdersController extends Controller
         return redirect()->route('orders.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Orders  $orders
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Orders $orders)
     {
         //
+    }
+
+    public function exportOrders()
+    {
+        return Excel::download(new OrdersExport, 'Excel.xlsx');
     }
 }

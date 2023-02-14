@@ -42,7 +42,6 @@
                                         <a href="{{ route('orders.edit', $order) }}"
                                             class="text-sky-700">Editar</a>
                                     </td>
-                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
