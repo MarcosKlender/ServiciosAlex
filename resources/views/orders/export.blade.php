@@ -1,30 +1,30 @@
 <table>
     <thead>
         <tr>
-            <th>ESTADO</th>
-            <th>CLIENTE</th>
-            <th>CELULAR</th>
-            <th>FECHAD DE ENTREGA</th>
-            <th>VENDEDOR</th>
-            <th>PULSERA</th>
-            <th>CARTA ROJA</th>
-            <th>CARTA AZUL</th>
-            <th>CARTA NEGRA</th>
-            <th>SPRAY</th>
-            <th>POTENTISIMO</th>
-            <th>MACHO ALFA</th>
-            <th>ANILLO</th>
-            <th>QUITA VICIOS</th>
-            <th>LOVIFEM</th>
-            <th>XOXO</th>
-            <th>SPRAY XOXO</th>
-            <th>LITOKU</th>
-            <th>MACHO ALFA 50</th>
-            <th>HEPADOL</th>
-            <th>COMPROBANTE</th>
-            <th>CARRERA</th>
-            <th>VALOR A DEPOSITAR</th>
-            <th>SECTOR</th>
+            <th style="font-weight: bold;">ESTADO</th>
+            <th style="font-weight: bold;">CLIENTE</th>
+            <th style="font-weight: bold;">CELULAR</th>
+            <th style="font-weight: bold;">FECHAD DE ENTREGA</th>
+            <th style="font-weight: bold;">VENDEDOR</th>
+            <th style="font-weight: bold;">PULSERA</th>
+            <th style="font-weight: bold;">CARTA ROJA</th>
+            <th style="font-weight: bold;">CARTA AZUL</th>
+            <th style="font-weight: bold;">CARTA NEGRA</th>
+            <th style="font-weight: bold;">SPRAY</th>
+            <th style="font-weight: bold;">POTENTISIMO</th>
+            <th style="font-weight: bold;">MACHO ALFA</th>
+            <th style="font-weight: bold;">ANILLO</th>
+            <th style="font-weight: bold;">QUITA VICIOS</th>
+            <th style="font-weight: bold;">LOVIFEM</th>
+            <th style="font-weight: bold;">XOXO</th>
+            <th style="font-weight: bold;">SPRAY XOXO</th>
+            <th style="font-weight: bold;">LITOKU</th>
+            <th style="font-weight: bold;">MACHO ALFA 50</th>
+            <th style="font-weight: bold;">HEPADOL</th>
+            <th style="font-weight: bold;">COMPROBANTE</th>
+            <th style="font-weight: bold;">CARRERA</th>
+            <th style="font-weight: bold;">VALOR A DEPOSITAR</th>
+            <th style="font-weight: bold;">SECTOR</th>
         </tr>
     </thead>
     <tbody>
@@ -51,10 +51,48 @@
                 <td>{{ $order->macho50 }}</td>
                 <td>{{ $order->hepadol }}</td>
                 <td>{{ $order->comprobante }}</td>
-                <td>{{ $order->carrera }}</td>
-                <td>{{ $order->total }}</td>
+                <td>$ {{ $order->carrera }}</td>
+                <td>$ {{ $order->total }}</td>
                 <td>{{ $order->stock }}</td>
             </tr>
+        @endforeach
+        <tr>
+            <td style="color: red;">TOTAL DE ENTREGAS</td>
+            <td style="color: red;">{{ $order->count('cliente') }}</td>
+            <td></td>
+            <td></td>
+            <td style="color: red;">TOTAL</td>
+            <td style="color: red;">{{ $order->sum('pulseras') }}</td>
+            <td style="color: red;">{{ $order->sum('broja') }}</td>
+            <td style="color: red;">{{ $order->sum('bazul') }}</td>
+            <td style="color: red;">{{ $order->sum('bnegra') }}</td>
+            <td style="color: red;">{{ $order->sum('spray') }}</td>
+            <td style="color: red;">{{ $order->sum('potentisimo') }}</td>
+            <td style="color: red;">{{ $order->sum('macho') }}</td>
+            <td style="color: red;">{{ $order->sum('anillos') }}</td>
+            <td style="color: red;">{{ $order->sum('quitavicio') }}</td>
+            <td style="color: red;">{{ $order->sum('lovin') }}</td>
+            <td style="color: red;">{{ $order->sum('xoxo') }}</td>
+            <td style="color: red;">{{ $order->sum('xoxoretardante') }}</td>
+            <td style="color: red;">{{ $order->sum('litoku') }}</td>
+            <td style="color: red;">{{ $order->sum('macho50') }}</td>
+            <td style="color: red;">{{ $order->sum('hepadol') }}</td>
+            <td></td>
+            <td></td>
+            <td style="color: red;">$ {{ $order->sum('total') }}</td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+            <td colspan="3" style="font-weight: bold;">NOVEDADES</td>
+        </tr>
+        @foreach ($orders as $order)
+            @empty($order->novedades)
+            @else
+                <tr>
+                    <td colspan="3">CL {{ $order->cliente }} - {{ $order->novedades }}</td>
+                </tr>
+            @endempty
         @endforeach
     </tbody>
 </table>

@@ -193,7 +193,7 @@ class DatabaseSeeder extends Seeder
             'estado' => 'PENDIENTE',
             'cliente' => 1,
             'celular' => '+593 123 456 7890',
-            'fecha_entrega' => '2021-08-11',
+            'fecha_entrega' => '2023-02-11',
             'vendedor' => 'MARCOS',
             'macho' => 1,
             'potentisimo' => 2,

@@ -25,7 +25,7 @@
                     </x-nav-link>
 
                     <x-nav-link :href="route('search.index')" :active="request()->routeIs('search.*')">
-                        {{ __('Búsqueda') }}
+                        {{ __('Exportar') }}
                     </x-nav-link>
                 </div>
                 
@@ -93,7 +93,7 @@
             </x-responsive-nav-link>
 
             <x-responsive-nav-link :href="route('search.index')" :active="request()->routeIs('search.*')">
-                {{ __('Búsqueda') }}
+                {{ __('Exportar') }}
             </x-responsive-nav-link>
         </div>
 

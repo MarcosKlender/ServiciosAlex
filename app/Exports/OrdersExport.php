@@ -11,8 +11,10 @@ class OrdersExport implements FromView, ShouldAutoSize
 {
     public function view(): View
     {
+        $day = '2023-02-11';
+
         return view ('orders.export', [
-            'orders' => Orders::all()
+            'orders' => Orders::where('fecha_entrega', $day)->get()
         ]);
     }
 }
