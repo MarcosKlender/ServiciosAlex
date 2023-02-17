@@ -9,12 +9,15 @@ use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 
 class OrdersExport implements FromView, ShouldAutoSize
 {
+    public function __construct($day)
+    {
+        $this->day = $day;
+    }
+
     public function view(): View
     {
-        $day = '2023-02-11';
-
-        return view ('orders.export', [
-            'orders' => Orders::where('fecha_entrega', $day)->get()
+        return view('orders.export', [
+            'orders' => Orders::where('fecha_entrega', $this->day)->get()
         ]);
     }
 }

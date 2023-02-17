@@ -58,28 +58,28 @@
         @endforeach
         <tr>
             <td style="color: red;">TOTAL DE ENTREGAS</td>
-            <td style="color: red;">{{ $order->count('cliente') }}</td>
+            <td style="color: red;">{{ $orders->count('cliente') }}</td>
             <td></td>
             <td></td>
             <td style="color: red;">TOTAL</td>
-            <td style="color: red;">{{ $order->sum('pulseras') }}</td>
-            <td style="color: red;">{{ $order->sum('broja') }}</td>
-            <td style="color: red;">{{ $order->sum('bazul') }}</td>
-            <td style="color: red;">{{ $order->sum('bnegra') }}</td>
-            <td style="color: red;">{{ $order->sum('spray') }}</td>
-            <td style="color: red;">{{ $order->sum('potentisimo') }}</td>
-            <td style="color: red;">{{ $order->sum('macho') }}</td>
-            <td style="color: red;">{{ $order->sum('anillos') }}</td>
-            <td style="color: red;">{{ $order->sum('quitavicio') }}</td>
-            <td style="color: red;">{{ $order->sum('lovin') }}</td>
-            <td style="color: red;">{{ $order->sum('xoxo') }}</td>
-            <td style="color: red;">{{ $order->sum('xoxoretardante') }}</td>
-            <td style="color: red;">{{ $order->sum('litoku') }}</td>
-            <td style="color: red;">{{ $order->sum('macho50') }}</td>
-            <td style="color: red;">{{ $order->sum('hepadol') }}</td>
+            <td style="color: red;">{{ $orders->sum('pulseras') }}</td>
+            <td style="color: red;">{{ $orders->sum('broja') }}</td>
+            <td style="color: red;">{{ $orders->sum('bazul') }}</td>
+            <td style="color: red;">{{ $orders->sum('bnegra') }}</td>
+            <td style="color: red;">{{ $orders->sum('spray') }}</td>
+            <td style="color: red;">{{ $orders->sum('potentisimo') }}</td>
+            <td style="color: red;">{{ $orders->sum('macho') }}</td>
+            <td style="color: red;">{{ $orders->sum('anillos') }}</td>
+            <td style="color: red;">{{ $orders->sum('quitavicio') }}</td>
+            <td style="color: red;">{{ $orders->sum('lovin') }}</td>
+            <td style="color: red;">{{ $orders->sum('xoxo') }}</td>
+            <td style="color: red;">{{ $orders->sum('xoxoretardante') }}</td>
+            <td style="color: red;">{{ $orders->sum('litoku') }}</td>
+            <td style="color: red;">{{ $orders->sum('macho50') }}</td>
+            <td style="color: red;">{{ $orders->sum('hepadol') }}</td>
             <td></td>
             <td></td>
-            <td style="color: red;">$ {{ $order->sum('total') }}</td>
+            <td style="color: red;">$ {{ $orders ->sum('total') }}</td>
         </tr>
         <tr></tr>
         <tr></tr>

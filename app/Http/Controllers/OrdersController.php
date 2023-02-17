@@ -127,8 +127,9 @@ class OrdersController extends Controller
         //
     }
 
-    public function exportOrders()
+    public function exportOrders(Request $request)
     {
-        return Excel::download(new OrdersExport, 'Excel.xlsx');
+        //dd($request->day);
+        return Excel::download(new OrdersExport($request->day), $request->day.'.xlsx');
     }
 }
