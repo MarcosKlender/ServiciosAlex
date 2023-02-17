@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Exports\OrdersExport;
 use Illuminate\Support\Str;
 use App\Models\Orders;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -129,7 +130,8 @@ class OrdersController extends Controller
 
     public function exportOrders(Request $request)
     {
-        //dd($request->day);
+        Carbon::setLocale('es');
+        //dd(Carbon::parse($request->day)->translatedFormat('l'));
         return Excel::download(new OrdersExport($request->day), $request->day.'.xlsx');
     }
 }

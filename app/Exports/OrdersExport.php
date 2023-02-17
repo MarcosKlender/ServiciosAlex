@@ -2,12 +2,14 @@
 
 namespace App\Exports;
 
+use Carbon\Carbon;
 use App\Models\Orders;
 use Illuminate\Contracts\View\View;
 use Maatwebsite\Excel\Concerns\FromView;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
+use Maatwebsite\Excel\Concerns\WithTitle;
 
-class OrdersExport implements FromView, ShouldAutoSize
+class OrdersExport implements FromView, ShouldAutoSize, WithTitle
 {
     public function __construct($day)
     {
@@ -19,5 +21,13 @@ class OrdersExport implements FromView, ShouldAutoSize
         return view('orders.export', [
             'orders' => Orders::where('fecha_entrega', $this->day)->get()
         ]);
+    }
+
+    public function title(): string
+    {
+        $dayname = Carbon::parse($this->day)->translatedFormat('l');
+        $daynumber = Carbon::parse($this->day)->translatedFormat('d');
+        
+        return $dayname.' '.$daynumber;
     }
 }

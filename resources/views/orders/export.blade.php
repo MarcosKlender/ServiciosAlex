@@ -79,16 +79,15 @@
             <td style="color: red;">{{ $orders->sum('hepadol') }}</td>
             <td></td>
             <td></td>
-            <td style="color: red;">$ {{ $orders ->sum('total') }}</td>
+            <td style="color: red;">$ {{ $orders->sum('total') }}</td>
         </tr>
         <tr></tr>
-        <tr></tr>
-        <tr>
-            <td colspan="3" style="font-weight: bold;">NOVEDADES</td>
-        </tr>
         @foreach ($orders as $order)
             @empty($order->novedades)
             @else
+                <tr>
+                    <td colspan="3" style="font-weight: bold;">NOVEDADES</td>
+                </tr>
                 <tr>
                     <td colspan="3">CL {{ $order->cliente }} - {{ $order->novedades }}</td>
                 </tr>

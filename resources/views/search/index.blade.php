@@ -26,8 +26,6 @@
                             </div>
                         </form>
                     </div>
-
-                    {{-- {{ Carbon\Carbon::today()->format('d-m-Y') }} --}}
                 </div>
             </div>
 
