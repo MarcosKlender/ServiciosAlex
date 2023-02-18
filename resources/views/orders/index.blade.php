@@ -10,7 +10,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-3 lg:px-4">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                
+
                 <div class="overflow-auto">
                     <table class="w-full">
                         <thead class="uppercase text-white text-left">
@@ -36,18 +36,23 @@
                                     <td class="p-3 whitespace-nowrap">{{ $order->total }}</td>
                                     <td class="p-3 whitespace-nowrap">{{ $order->stock }}</td>
                                     <td class="p-3 whitespace-nowrap">
-                                        <a href="{{ route('orders.show', $order) }}"
-                                            class="text-green-700">Ver Detalles</a>
-                                            <br>
-                                        <a href="{{ route('orders.edit', $order) }}"
-                                            class="text-sky-700">Editar</a>
+                                        <a href="{{ route('orders.show', $order) }}" class="text-green-700">Detalles</a>
+                                        <br>
+                                        <a href="{{ route('orders.edit', $order) }}" class="text-sky-700">Editar</a>
+                                        <form action="{{ route('orders.destroy', $order) }}" method="POST"
+                                            class="text-red-700">
+                                            @csrf
+                                            @method('DELETE')
+                                            <input type="submit" value="Eliminar" class="text-red-700"
+                                                onclick="return confirm('¿Está seguro de eliminar este producto?')">
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach
                         </tbody>
                     </table>
                 </div>
-
+                {{ $orders->links() }}
             </div>
         </div>
     </div>

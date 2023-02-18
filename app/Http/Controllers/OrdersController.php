@@ -14,7 +14,7 @@ class OrdersController extends Controller
     public function index()
     {
         return view('orders.index', [
-            'orders' => Orders::orderBy('id', 'desc')->get()
+            'orders' => Orders::orderBy('id', 'desc')->paginate(15)
         ]);
     }
 
@@ -123,9 +123,11 @@ class OrdersController extends Controller
         return redirect()->route('orders.index');
     }
 
-    public function destroy(Orders $orders)
+    public function destroy(Orders $order)
     {
-        //
+        $order->delete();
+
+        return back();
     }
 
     public function exportOrders(Request $request)

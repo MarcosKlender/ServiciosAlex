@@ -11,6 +11,8 @@ use Maatwebsite\Excel\Concerns\WithTitle;
 
 class OrdersExport implements FromView, ShouldAutoSize, WithTitle
 {
+    protected $day;
+
     public function __construct($day)
     {
         $this->day = $day;
