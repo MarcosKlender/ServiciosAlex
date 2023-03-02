@@ -25,6 +25,7 @@ Route::resource('products', ProductsController::class);
 
 Route::resource('orders', OrdersController::class);
 
+Route::get('/search/report' , [SearchController::class, 'report'])->name('search.report');
 Route::resource('search', SearchController::class);
 
 Route::resource('stocks', StocksController::class);

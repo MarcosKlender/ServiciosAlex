@@ -21,7 +21,7 @@ class OrdersExport implements FromView, ShouldAutoSize, WithTitle
     public function view(): View
     {
         return view('orders.export', [
-            'orders' => Orders::where('fecha_entrega', $this->day)->get()
+            'orders' => Orders::where('estado', 'ENTREGADO')->where('fecha_entrega', $this->day)->get()
         ]);
     }
 
@@ -29,7 +29,7 @@ class OrdersExport implements FromView, ShouldAutoSize, WithTitle
     {
         $dayname = Carbon::parse($this->day)->translatedFormat('l');
         $daynumber = Carbon::parse($this->day)->translatedFormat('d');
-        
-        return $dayname.' '.$daynumber;
+
+        return $dayname . ' ' . $daynumber;
     }
 }

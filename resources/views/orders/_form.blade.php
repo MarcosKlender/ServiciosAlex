@@ -10,7 +10,9 @@
         </span>
         <select name="estado" class="rounded border-gray-200 w-full mb-4">
             <option value="PENDIENTE" {{ $order->estado == 'PENDIENTE' ? 'selected' : '' }}>PENDIENTE</option>
+            <option value="PARA MAÑANA" {{ $order->estado == 'PARA MAÑANA' ? 'selected' : '' }}>PARA MAÑANA</option>
             <option value="ENTREGADO" {{ $order->estado == 'ENTREGADO' ? 'selected' : '' }}>ENTREGADO</option>
+            <option value="CANCELADO" {{ $order->estado == 'CANCELADO' ? 'selected' : '' }}>CANCELADO</option>
         </select>
     </div>
 

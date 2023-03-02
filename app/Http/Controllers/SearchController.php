@@ -82,4 +82,9 @@ class SearchController extends Controller
     {
         //
     }
+
+    public function report()
+    {
+        return view('search.report');
+    }
 }
