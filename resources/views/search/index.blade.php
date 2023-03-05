@@ -11,7 +11,6 @@
                 <div class="p-6 text-gray-900">
                     <div>
                         <form action="{{ route('orders.export') }}">
-                            <label class="text-gray-700">Elija el día que desee exportar:</label>
                             <input type="date" name="day" class="rounded border-gray-200 w-full mb-4" required>
                             <div class="text-center">
                                 <button type="submit"

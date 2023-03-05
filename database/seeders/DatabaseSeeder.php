@@ -33,6 +33,14 @@ class DatabaseSeeder extends Seeder
             'stock4' => 0,
             'stock5' => 0,
             'stock6' => 0,
+            'existencias' => 0,
+            'lunes' => 0,
+            'martes' => 0,
+            'miercoles' => 0,
+            'jueves' => 0,
+            'viernes' => 0,
+            'sabado' => 0,
+            'domingo' => 0,
         ]);
 
         DB::table('products')->insert([
@@ -44,6 +52,14 @@ class DatabaseSeeder extends Seeder
             'stock4' => 0,
             'stock5' => 0,
             'stock6' => 0,
+            'existencias' => 0,
+            'lunes' => 0,
+            'martes' => 0,
+            'miercoles' => 0,
+            'jueves' => 0,
+            'viernes' => 0,
+            'sabado' => 0,
+            'domingo' => 0,
         ]);
 
         DB::table('products')->insert([
@@ -55,6 +71,14 @@ class DatabaseSeeder extends Seeder
             'stock4' => 0,
             'stock5' => 0,
             'stock6' => 0,
+            'existencias' => 0,
+            'lunes' => 0,
+            'martes' => 0,
+            'miercoles' => 0,
+            'jueves' => 0,
+            'viernes' => 0,
+            'sabado' => 0,
+            'domingo' => 0,
         ]);
 
         DB::table('products')->insert([
@@ -66,6 +90,14 @@ class DatabaseSeeder extends Seeder
             'stock4' => 0,
             'stock5' => 0,
             'stock6' => 0,
+            'existencias' => 0,
+            'lunes' => 0,
+            'martes' => 0,
+            'miercoles' => 0,
+            'jueves' => 0,
+            'viernes' => 0,
+            'sabado' => 0,
+            'domingo' => 0,
         ]);
 
         DB::table('products')->insert([
@@ -77,6 +109,14 @@ class DatabaseSeeder extends Seeder
             'stock4' => 0,
             'stock5' => 0,
             'stock6' => 0,
+            'existencias' => 0,
+            'lunes' => 0,
+            'martes' => 0,
+            'miercoles' => 0,
+            'jueves' => 0,
+            'viernes' => 0,
+            'sabado' => 0,
+            'domingo' => 0,
         ]);
 
         DB::table('products')->insert([
@@ -88,6 +128,14 @@ class DatabaseSeeder extends Seeder
             'stock4' => 0,
             'stock5' => 0,
             'stock6' => 0,
+            'existencias' => 0,
+            'lunes' => 0,
+            'martes' => 0,
+            'miercoles' => 0,
+            'jueves' => 0,
+            'viernes' => 0,
+            'sabado' => 0,
+            'domingo' => 0,
         ]);
 
         DB::table('products')->insert([
@@ -99,6 +147,14 @@ class DatabaseSeeder extends Seeder
             'stock4' => 0,
             'stock5' => 0,
             'stock6' => 0,
+            'existencias' => 0,
+            'lunes' => 0,
+            'martes' => 0,
+            'miercoles' => 0,
+            'jueves' => 0,
+            'viernes' => 0,
+            'sabado' => 0,
+            'domingo' => 0,
         ]);
 
         DB::table('products')->insert([
@@ -110,6 +166,14 @@ class DatabaseSeeder extends Seeder
             'stock4' => 0,
             'stock5' => 0,
             'stock6' => 0,
+            'existencias' => 0,
+            'lunes' => 0,
+            'martes' => 0,
+            'miercoles' => 0,
+            'jueves' => 0,
+            'viernes' => 0,
+            'sabado' => 0,
+            'domingo' => 0,
         ]);
 
         DB::table('products')->insert([
@@ -121,6 +185,14 @@ class DatabaseSeeder extends Seeder
             'stock4' => 0,
             'stock5' => 0,
             'stock6' => 0,
+            'existencias' => 0,
+            'lunes' => 0,
+            'martes' => 0,
+            'miercoles' => 0,
+            'jueves' => 0,
+            'viernes' => 0,
+            'sabado' => 0,
+            'domingo' => 0,
         ]);
 
         DB::table('products')->insert([
@@ -132,6 +204,14 @@ class DatabaseSeeder extends Seeder
             'stock4' => 0,
             'stock5' => 0,
             'stock6' => 0,
+            'existencias' => 0,
+            'lunes' => 0,
+            'martes' => 0,
+            'miercoles' => 0,
+            'jueves' => 0,
+            'viernes' => 0,
+            'sabado' => 0,
+            'domingo' => 0,
         ]);
 
         DB::table('products')->insert([
@@ -143,6 +223,14 @@ class DatabaseSeeder extends Seeder
             'stock4' => 0,
             'stock5' => 0,
             'stock6' => 0,
+            'existencias' => 0,
+            'lunes' => 0,
+            'martes' => 0,
+            'miercoles' => 0,
+            'jueves' => 0,
+            'viernes' => 0,
+            'sabado' => 0,
+            'domingo' => 0,
         ]);
 
         DB::table('products')->insert([
@@ -154,6 +242,14 @@ class DatabaseSeeder extends Seeder
             'stock4' => 0,
             'stock5' => 0,
             'stock6' => 0,
+            'existencias' => 0,
+            'lunes' => 0,
+            'martes' => 0,
+            'miercoles' => 0,
+            'jueves' => 0,
+            'viernes' => 0,
+            'sabado' => 0,
+            'domingo' => 0,
         ]);
 
         DB::table('products')->insert([
@@ -165,6 +261,14 @@ class DatabaseSeeder extends Seeder
             'stock4' => 0,
             'stock5' => 0,
             'stock6' => 0,
+            'existencias' => 0,
+            'lunes' => 0,
+            'martes' => 0,
+            'miercoles' => 0,
+            'jueves' => 0,
+            'viernes' => 0,
+            'sabado' => 0,
+            'domingo' => 0,
         ]);
 
         DB::table('products')->insert([
@@ -176,6 +280,14 @@ class DatabaseSeeder extends Seeder
             'stock4' => 0,
             'stock5' => 0,
             'stock6' => 0,
+            'existencias' => 0,
+            'lunes' => 0,
+            'martes' => 0,
+            'miercoles' => 0,
+            'jueves' => 0,
+            'viernes' => 0,
+            'sabado' => 0,
+            'domingo' => 0,
         ]);
 
         DB::table('products')->insert([
@@ -187,6 +299,14 @@ class DatabaseSeeder extends Seeder
             'stock4' => 0,
             'stock5' => 0,
             'stock6' => 0,
+            'existencias' => 0,
+            'lunes' => 0,
+            'martes' => 0,
+            'miercoles' => 0,
+            'jueves' => 0,
+            'viernes' => 0,
+            'sabado' => 0,
+            'domingo' => 0,
         ]);
 
         DB::table('orders')->insert([

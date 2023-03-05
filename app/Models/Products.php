@@ -18,5 +18,13 @@ class Products extends Model
         'stock4',
         'stock5',
         'stock6',
+        'existencias',
+        'lunes',
+        'martes',
+        'miercoles',
+        'jueves',
+        'viernes',
+        'sabado',
+        'domingo',
     ];
 }
