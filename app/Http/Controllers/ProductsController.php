@@ -28,7 +28,7 @@ class ProductsController extends Controller
      */
     public function create(Products $product)
     {
-        return view('products.create', ['product' => $product]);
+        return view('products.create', ['product' => $product, 'stocks' => Stocks::first()]);
     }
 
     /**
@@ -94,7 +94,7 @@ class ProductsController extends Controller
      */
     public function edit(Products $product)
     {
-        return view('products.edit', ['product' => $product]);
+        return view('products.edit', ['product' => $product, 'stocks' => Stocks::first()]);
     }
 
     /**

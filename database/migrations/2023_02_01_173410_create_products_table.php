@@ -24,14 +24,14 @@ return new class extends Migration
             $table->integer('stock4');
             $table->integer('stock5');
             $table->integer('stock6');
-            $table->integer('existencias');
-            $table->integer('lunes');
-            $table->integer('martes');
-            $table->integer('miercoles');
-            $table->integer('jueves');
-            $table->integer('viernes');
-            $table->integer('sabado');
-            $table->integer('domingo');
+            $table->integer('existencias')->nullable();
+            $table->integer('lunes')->nullable();
+            $table->integer('martes')->nullable();
+            $table->integer('miercoles')->nullable();
+            $table->integer('jueves')->nullable();
+            $table->integer('viernes')->nullable();
+            $table->integer('sabado')->nullable();
+            $table->integer('domingo')->nullable();
         });
     }
 
